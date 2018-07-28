@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Consumindo API</title>
+</head>
+<body>
+
+    <div>
+        <div>
+            <h2>Todos os Produtos</h2>
+            <button onclick="TodosJogos();">Todos os Jogos</button><br /><br />
+            <ul id="categorias"></ul><br /><br />
+            <ul id="jogos"></ul>
+        </div>
+        <div>
+            <h2>Procurar jogos por código: </h2>
+            <input type="text" id="jogoId" size="5" />
+            <input type="button" id="btnProcurar" onclick="ProcurarJogo()" />
+            <p id="exibirProduto"></p>     
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+            var uri = 'api/jogo';
+            var uriListarPorCategoria = 'api/categoria';
+            var uriCategorias = 'api/categorias';
+
+            $(document).ready(function (e) {
+                TodosJogos();
+                TodasCategorias();
+            });
+
+
+            function TodosJogos() {
+                $.getJSON(uri).
+                    done(function (data) {
+                        limparListagem();
+                        $.each(data, function (key, item) {
+                            $('<li>', { text: formatarItem(item) }).appendTo($('#jogos'));
+                        });
+                    });
+            }
+
+            function TodasCategorias() {
+                $.getJSON(uriCategorias).
+                    done(function (data) {
+                        $.each(data, function (key, item) {
+                            $('<li>', {
+                                text: item,
+                                style: 'cursor:pointer;',
+                                onclick: 'ProcurarPelaCategoria("'+item+'")'
+                            }).appendTo($('#categorias'));
+                        });
+                    });
+            }
+
+            function ProcurarJogo() {
+                var codigoDigitado = $("#jogoId").val();
+                $.getJSON(uri + "/" + codigoDigitado).done(
+                    function (data) {
+                        $('#exibirProduto').text(formatarItem(data));
+                    }
+                );
+            }
+
+            function ProcurarPelaCategoria(nomeCategoria) {
+               
+                $.getJSON(uriListarPorCategoria + "/" + nomeCategoria).
+                    done(function (data) {
+                        limparListagem();
+                        $.each(data, function (key, item) {
+                            $('<li>', { text: formatarItem(item) }).appendTo($('#jogos'));
+                        });
+                    });
+            }
+
+            function formatarItem(item) {
+                return item.IdJogo + " - " + item.Nome + " - Categoria: " + item.Categoria;
+            }
+
+            function limparListagem() {
+                $('#jogos').empty();
+            }
+
+        </script>
+    </div>
+</body>
+</html>

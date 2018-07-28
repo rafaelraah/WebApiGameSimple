@@ -1,0 +1,11 @@
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\bin\Debug\netcoreapp2.0\ProjetoWebAPI.deps.json
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\bin\Debug\netcoreapp2.0\ProjetoWebAPI.runtimeconfig.json
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\bin\Debug\netcoreapp2.0\ProjetoWebAPI.runtimeconfig.dev.json
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\bin\Debug\netcoreapp2.0\ProjetoWebAPI.dll
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\bin\Debug\netcoreapp2.0\ProjetoWebAPI.pdb
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.csprojAssemblyReference.cache
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.AssemblyInfoInputs.cache
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.AssemblyInfo.cs
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.dll
+C:\Users\Raah\source\repos\ProjetoWebAPI\ProjetoWebAPI\obj\Debug\netcoreapp2.0\ProjetoWebAPI.pdb
